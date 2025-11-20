@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <title>MYDAY Chatbot Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <p class="badge">MYDAY CNC</p>
+      <h1>智能客服 Demo</h1>
+      <p class="lead">這個頁面展示如何透過 n8n + ngrok 連接現有 chatbot，讓訪客直接在網頁上提問。</p>
+      <a class="cta" href="mailto:sales@mydaymi.com">聯絡我們</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <div>
+      <h2>快速部署</h2>
+      <p>透過 n8n workflow，不需要後端就能串接 Pinecone、Gemini 等 AI 工具。</p>
+    </div>
+    <div>
+      <h2>即時回覆</h2>
+      <p>ngrok 把本機 webhook 對外公開，讓 CMS 或 demo 網頁立刻可用。</p>
+    </div>
+    <div>
+      <h2>安全控制</h2>
+      <p>Webhook 搭配 Basic Auth，確保只有授權的網站可以呼叫。</p>
+    </div>
+  </section>
+
+  <section class="instructions">
+    <h3>使用方式</h3>
+    <ol>
+      <li>在聊天視窗輸入任何 MYDAY 產品問題。</li>
+      <li>訊息會送到 n8n workflow，由 AI Agent 查詢知識庫。</li>
+      <li>回覆將顯示在聊天視窗，方便 Demo 或測試。</li>
+    </ol>
+  </section>
+
+  <footer>
+    &copy; 2025 MYDAY CNC. Demo 整合：n8n + ngrok。
+  </footer>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>

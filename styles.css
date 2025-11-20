@@ -1,0 +1,61 @@
+﻿* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif;
+  color: #1b1f23;
+  background: #f7f9fc;
+}
+.hero {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: #fff;
+  padding: 80px 20px;
+}
+.hero-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.lead {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.cta {
+  display: inline-block;
+  background: #ffc107;
+  color: #252733;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.instructions {
+  background: #fff;
+  padding: 40px 20px 80px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(15,23,42,0.08);
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+}
