@@ -1,6 +1,5 @@
 ﻿(function () {
   const WEBHOOK_URL = 'https://unguillotined-nebuly-mendy.ngrok-free.dev/webhook/708af31b-9843-46f8-9fd9-4d315c38160c';
-  const BASIC_AUTH_HEADER = 'Basic Y21zYm90OlN0cjBuZ1Bhc3MxMjMh';
 
   const init = () => {
     const style = document.createElement('style');
@@ -101,7 +100,6 @@
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': BASIC_AUTH_HEADER,
           },
           body: JSON.stringify({ message, source: 'github-demo' }),
         });
