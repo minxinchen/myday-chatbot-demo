@@ -101,7 +101,7 @@
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ message, source: 'github-demo' }),
+          body: JSON.stringify({ action: 'sendMessage', chatInput: message }),
         });
         const text = await response.text();
         appendBubble(text || '已提交，請在 n8n 查看結果。', false);
