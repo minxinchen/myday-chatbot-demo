@@ -1,6 +1,13 @@
 ﻿(function () {
   const WEBHOOK_URL = 'https://unguillotined-nebuly-mendy.ngrok-free.dev/webhook/708af31b-9843-46f8-9fd9-4d315c38160c';
 
+  // Generate or retrieve session ID
+  let sessionId = sessionStorage.getItem('chatbot-session-id');
+  if (!sessionId) {
+    sessionId = 'session-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+    sessionStorage.setItem('chatbot-session-id', sessionId);
+  }
+
   const init = () => {
     const style = document.createElement('style');
     style.textContent = `
@@ -101,7 +108,11 @@
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ action: 'sendMessage', chatInput: message }),
+          body: JSON.stringify({
+            sessionId: sessionId,
+            action: 'sendMessage',
+            chatInput: message
+          }),
         });
         const text = await response.text();
         appendBubble(text || '已提交，請在 n8n 查看結果。', false);
